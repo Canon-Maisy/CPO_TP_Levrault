@@ -40,6 +40,7 @@ public class Exo2 {
     Scanner sc = new Scanner(System.in);
     System.out.println("\n Entrer le nombre :");
     nb=sc.nextInt(); // On demande a sc de donner le prochain entier
+    
     }
     
 }
