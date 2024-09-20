@@ -4,6 +4,7 @@
  */
 package calculator;
 
+import static java.time.Clock.system;
 import java.util.Scanner;
 
 /**
@@ -25,7 +26,10 @@ public class Calculator {
         
         Scanner sc = new Scanner(System.in);
         System.out.println("faites votre choix :");
-        int choice = sc.nextInt();        
+        int choice = sc.nextInt();    
+        if (choice > 5 || choice < 1) {
+        System.out.println("veuillez rentrer une variable opérateur correcte");
+        }   
         
         System.out.println("1ere valeur");
         int operande1 = sc.nextInt();
