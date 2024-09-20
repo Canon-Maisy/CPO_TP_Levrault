@@ -4,6 +4,8 @@
  */
 package calculator;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Maxime
@@ -22,7 +24,26 @@ public class Calculator {
         System.out.println("5) modulo");
         
         Scanner sc = new Scanner(System.in);
-        choice = sc.nextInt()
+        System.out.println("faites votre choix :");
+        int choice = sc.nextInt();        
+        
+        System.out.println("1ere valeur");
+        int operande1 = sc.nextInt();
+        System.out.println("2ere valeur");
+        int operande2 = sc.nextInt();
+        
+        if (choice == 1) { 
+            System.out.println(operande1 + operande2);
+        } else if (choice == 2) {
+            System.out.println(operande1 - operande2);
+        } else if (choice == 3) {
+            System.out.println(operande1 * operande2);
+        } else if (choice == 4) {
+            System.out.println(operande1 / operande2);
+        } else if (choice == 5){
+            System.out.println(operande1 % operande2);
+        }
+        
         
         
     }
