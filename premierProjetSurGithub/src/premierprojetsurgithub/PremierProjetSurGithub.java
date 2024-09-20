@@ -4,6 +4,8 @@
  */
 package premierprojetsurgithub;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Maxime
@@ -14,7 +16,17 @@ public class PremierProjetSurGithub {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        /*System.out.println("hello world");
+        int wouaf = 20;
+        System.out.println(wouaf);
+        System.out.println("bye world");*/
+        
+        String prenom;
+        Scanner sc;
+        sc = new Scanner(System.in);
+        System.out.println("Bonjour, quel est votre prenom ?");
+        prenom = sc.nextLine();
+        System.out.println(prenom);
     }
     
 }
