@@ -17,8 +17,8 @@ public class TP1_convertisseur_LEVRAULT {
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
-        System.out.println("entrez une température en Celsius : ");
+
+        /*System.out.println("entrez une température en Celsius : ");
         double tempC = scanner.nextDouble();
         //System.out.println(nbr);
         //System.out.println("conversion de la température de °C en °K : " + (nbr + 273.15));
@@ -32,35 +32,49 @@ public class TP1_convertisseur_LEVRAULT {
         System.out.println("retour en celsius : "+ FarenheitVersCelcius(tempF));
         
         System.out.println("farenheit => kelvin : "+ FarenheitVersKelvin(tempF));
-        System.out.println("kelvin => farenheit :" + KelvinVersFarenheit(tempK));
-        
-        
-        
+        System.out.println("kelvin => farenheit :" + KelvinVersFarenheit(tempK));*/
+        System.out.println("saisissez une valeur :");
+        double temp = scanner.nextDouble();
+        System.out.println("Saisissez la conversion que vous souhaiter effectuer :\n1) De Celcius vers Kelvin\n2) De Kelvin vers Celcius\n3) de Farenheit vers Celsius\n4) de Celsius vers Farenheit\n5) de Kelvin vers Farenheit\n6) de Farenheit vers Kelvin");
+        int choice;
+
+        do {
+            choice = scanner.nextInt();
+            switch (choice) {
+                case 1: System.out.println(CelciusVersKelvin(temp));break;
+                case 2: System.out.println(KelvinVersCelcius(temp));break;
+                case 3: System.out.println(FarenheitVersCelcius(temp));break;
+                case 4: System.out.println(CelciusVersFarenheit(temp));break;
+                case 5: System.out.println(KelvinVersFarenheit(temp));break;
+                case 6: System.out.println(FarenheitVersKelvin(temp));break;
+                default : System.out.println("entrée incorrecte");
+            }
+            } while (choice < 1 || choice > 6);
+    
     }
-    public static double CelciusVersKelvin (double tCelcius) {
+    
+    
+    public static double CelciusVersKelvin(double tCelcius) {
         return tCelcius + 273.15;
     }
-    
-    public static double KelvinVersCelcius (double tKelvin){
+
+    public static double KelvinVersCelcius(double tKelvin) {
         return tKelvin - 273.15;
     }
-    
-    public static double FarenheitVersCelcius (double tFarenheit){
-        return (tFarenheit -32)/1.8;
+
+    public static double FarenheitVersCelcius(double tFarenheit) {
+        return (tFarenheit - 32) / 1.8;
     }
-    
-    public static double CelciusVersFarenheit (double tCelcius){
+
+    public static double CelciusVersFarenheit(double tCelcius) {
         return (tCelcius * 1.8) + 32;
     }
-    
-    public static double KelvinVersFarenheit (double tKelvin){
+
+    public static double KelvinVersFarenheit(double tKelvin) {
         return (tKelvin - 273.15) * 1.8 + 32;
     }
-    
-    public static double FarenheitVersKelvin (double tFarenheit){
+
+    public static double FarenheitVersKelvin(double tFarenheit) {
         return (tFarenheit - 32) * 1.8 + 273.15;
     }
 }
-
-
-
