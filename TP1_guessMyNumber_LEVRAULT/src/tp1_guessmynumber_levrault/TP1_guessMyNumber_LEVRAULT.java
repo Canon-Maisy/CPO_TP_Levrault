@@ -23,22 +23,29 @@ public class TP1_guessMyNumber_LEVRAULT {
         /*for (int i = 0; i < 5; i++) {
             int n = generateurAleat.nextInt(100);
             System.out.println(n);*/
-        int difficulty;
+        int choice_d, nbr;
         do {
             System.out.println("Choisissez votre difficultée : \n1) facile(0-100)\n2)moyen(0-1 000)\n3)dur(0-10 000)");
-            difficulty = scanner.nextInt();
-            switch (difficulty) {
+            choice_d = scanner.nextInt();
+            switch (choice_d) {
                 case 1:
                     System.out.println("facile");
+                    nbr = generateurAleat.nextInt(100);
+                    break;
                 case 2:
                     System.out.println("moyen");
+                    nbr = generateurAleat.nextInt(1000);
+                    break;
                 case 3:
                     System.out.println("dur");
+                    nbr = generateurAleat.nextInt(10000);
+                    break;
                 default:
-                    System.out.println("saisie invalide");
+                    System.out.println("saisie invalide");break;
             }
-        } while (difficulty < 1 || difficulty > 3);
-        int nbr = generateurAleat.nextInt(100);
+        } while (choice_d < 1 || choice_d > 3);
+        
+        
         int choice;
         int compteur = 0;
         do {
