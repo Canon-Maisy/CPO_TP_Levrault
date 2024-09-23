@@ -23,7 +23,11 @@ public class TP1_guessMyNumber_LEVRAULT {
         /*for (int i = 0; i < 5; i++) {
             int n = generateurAleat.nextInt(100);
             System.out.println(n);*/
-        int choice_d, nbr;
+        
+        
+        
+        int choice_d;
+        int nbr = 0;
         do {
             System.out.println("Choisissez votre difficultée : \n1) facile(0-100)\n2)moyen(0-1 000)\n3)dur(0-10 000)");
             choice_d = scanner.nextInt();
@@ -49,7 +53,7 @@ public class TP1_guessMyNumber_LEVRAULT {
         int choice;
         int compteur = 0;
         do {
-            System.out.println("votre choix :");
+            System.out.println("votre réponse :");
             choice = scanner.nextInt();
             if (choice > nbr) {
                 System.out.println("trop grand");
