@@ -23,11 +23,17 @@ public class TP1_guessMyNumber_LEVRAULT {
         /*for (int i = 0; i < 5; i++) {
             int n = generateurAleat.nextInt(100);
             System.out.println(n);*/
-        
         int nbr = generateurAleat.nextInt(100);
-        int choice = scanner.nextInt();
-        
-        }
+        int choice;
+        do {
+            System.out.println("votre choix :");
+            choice = scanner.nextInt();
+            if (choice > nbr) {
+                System.out.println("trop grand");
+            } else if (choice < nbr) {
+                System.out.println("trop petit");
+            }
+        } while (choice != nbr);
+        System.out.println("Vous avez trouvé le numéro => " + nbr);
     }
-
 }
