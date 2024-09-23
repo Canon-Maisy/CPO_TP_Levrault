@@ -23,8 +23,24 @@ public class TP1_guessMyNumber_LEVRAULT {
         /*for (int i = 0; i < 5; i++) {
             int n = generateurAleat.nextInt(100);
             System.out.println(n);*/
+        int difficulty;
+        do {
+            System.out.println("Choisissez votre difficultée : \n1) facile(0-100)\n2)moyen(0-1 000)\n3)dur(0-10 000)");
+            difficulty = scanner.nextInt();
+            switch (difficulty) {
+                case 1:
+                    System.out.println("facile");
+                case 2:
+                    System.out.println("moyen");
+                case 3:
+                    System.out.println("dur");
+                default:
+                    System.out.println("saisie invalide");
+            }
+        } while (difficulty < 1 || difficulty > 3);
         int nbr = generateurAleat.nextInt(100);
         int choice;
+        int compteur = 0;
         do {
             System.out.println("votre choix :");
             choice = scanner.nextInt();
@@ -33,7 +49,8 @@ public class TP1_guessMyNumber_LEVRAULT {
             } else if (choice < nbr) {
                 System.out.println("trop petit");
             }
+            compteur += 1;
         } while (choice != nbr);
-        System.out.println("Vous avez trouvé le numéro => " + nbr);
+        System.out.println("Vous avez trouvé le nombre en " + compteur + " coups.");
     }
 }
