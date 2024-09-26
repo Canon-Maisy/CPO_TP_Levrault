@@ -21,11 +21,16 @@ public class TP1_stats_LEVRAULT {
         Scanner scanner = new Scanner(System.in);
         int m;
         Random random = new Random();
+        
+        System.out.println("choisissez une valeur :");
+        
         int[] tab = new int[6];
         for (int i = 0; i < 6; i++) {
             tab[i] = 0;
         }
+        
         m = scanner.nextInt();
+        
         for (int i = 0; i < m; i++) {
             int randomNumber = random.nextInt(6);
             tab[randomNumber] += 1;
