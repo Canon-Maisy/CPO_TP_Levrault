@@ -39,7 +39,7 @@ public class TP1_stats_LEVRAULT {
         
         for (int i = 0; i<6; i++){
             double pourcentage = (tab[i]/(m*1.0))*100;
-            System.out.println(pourcentage);
+            System.out.println("il y a " + pourcentage + " % du " + (i+1) + " nombre.");
         }
     }
 
