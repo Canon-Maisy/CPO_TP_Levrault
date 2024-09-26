@@ -33,15 +33,12 @@ public class TP1_guessMyNumber_LEVRAULT {
             choice_d = scanner.nextInt();
             switch (choice_d) {
                 case 1:
-                    System.out.println("facile");
                     nbr = generateurAleat.nextInt(100);
                     break;
                 case 2:
-                    System.out.println("moyen");
                     nbr = generateurAleat.nextInt(1000);
                     break;
                 case 3:
-                    System.out.println("dur");
                     nbr = generateurAleat.nextInt(10000);
                     break;
                 default:
@@ -49,7 +46,7 @@ public class TP1_guessMyNumber_LEVRAULT {
             }
         } while (choice_d < 1 || choice_d > 3);
         
-        
+        System.out.println("vous devez deviner un nombre choisi aléatoirement dans l'intervalle choisi;");
         int choice;
         int compteur = 0;
         do {
