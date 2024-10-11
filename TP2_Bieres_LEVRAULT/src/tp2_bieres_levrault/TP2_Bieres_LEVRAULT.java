@@ -16,21 +16,25 @@ public class TP2_Bieres_LEVRAULT {
     public static void main(String[] args) {
         BouteilleBiere UneBiere = new BouteilleBiere("Cuvée des trolls", 7.0, "Dubuisson");
         UneBiere.lireEtiquette();
+        System.out.println(UneBiere);
         
-        /*BouteilleBiere BiereLeffe = new  BouteilleBiere("Leffe", 6.6, "Abbaye de Leffe");
-        BiereLeffe.lireEtiquette();
+        BouteilleBiere BiereLeffe = new  BouteilleBiere("Leffe", 6.6, "Abbaye de Leffe");
+        //BiereLeffe.lireEtiquette();
+        BiereLeffe.Décapsuler();
+        System.out.println(BiereLeffe);
         
         BouteilleBiere BiereChouffe = new BouteilleBiere("Chouffe", 8.0, "Achouffe");
-        BiereChouffe.lireEtiquette();
+        //BiereChouffe.lireEtiquette();
+        BiereChouffe.Décapsuler();
+        System.out.println(BiereChouffe);
         
         BouteilleBiere BiereDespe = new BouteilleBiere ("Desperados", 5.9, "Heineken");
-        BiereDespe.lireEtiquette();
+        //BiereDespe.lireEtiquette();
+        System.out.println(BiereDespe);
         
         BouteilleBiere BierePelforth = new BouteilleBiere("Pelforth", 5.8, "Brasserie du pélican");
-        BierePelforth.lireEtiquette();*/
-        
-        System.out.println(UneBiere.Décapsuler());
-        System.out.println(UneBiere.Décapsuler());
+        //BierePelforth.lireEtiquette();
+        System.out.println(BierePelforth);
         
     }
     
