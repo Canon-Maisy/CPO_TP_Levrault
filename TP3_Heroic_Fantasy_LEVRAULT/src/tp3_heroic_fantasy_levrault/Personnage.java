@@ -9,6 +9,7 @@ package tp3_heroic_fantasy_levrault;
  * @author Maxime
  */
 public abstract class Personnage {
+
     private String nom;
     private int Pv;
 
@@ -16,15 +17,15 @@ public abstract class Personnage {
         this.nom = nom;
         this.Pv = Pv;
     }
-    
+
     public String getNom() {
         return nom;
     }
-    
-    public int getPv(){
+
+    public int getPv() {
         return Pv;
     }
-
+    
     @Override
     public String toString() {
         return "Personnage{" + "nom=" + nom + ", Pv=" + Pv + '}';
