@@ -17,7 +17,9 @@ public abstract class Arme {
         this.nom = nom;
         
         if (attaque > 100) {
-            this.attaque = 100; // On limite à 100
+            this.attaque = 100; // On limite supérieurement à 100
+        } else if (attaque < 0){
+            this.attaque = 100; // On limite inférieurement à 0
         } else {
             this.attaque = attaque;
         }
@@ -26,10 +28,11 @@ public abstract class Arme {
     //setter avec restriction
     public void setAttaque(int attaque){
         if (attaque > 100) {
-            this.attaque = 100; // On limite à 100
+            this.attaque = 100; // On limite supérieurement à 100
+        } else if (attaque < 0){
+            this.attaque = 100; // On limite inférieurement à 0
         } else {
-            this.attaque = attaque;
-        }
+            this.attaque = attaque;}
     }
     
     //getter pour l'attaque
