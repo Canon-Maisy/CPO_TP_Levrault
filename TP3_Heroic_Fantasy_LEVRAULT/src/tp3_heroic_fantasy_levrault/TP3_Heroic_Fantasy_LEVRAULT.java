@@ -4,7 +4,11 @@
  */
 package tp3_heroic_fantasy_levrault;
 
+import Armes.Arme;
+import Armes.Epee;
+import Armes.Baton;
 import java.util.ArrayList;
+import Armes.*;
 
 /**
  *
