@@ -8,26 +8,28 @@ package Armes;
  *
  * @author Maxime
  */
-public class Baton extends Arme{
+public class Baton extends Arme {
+
     private int age;
 
     public Baton(int age, String nom, int attaque) {
         super(nom, attaque);
-        if (age > 100){
+        if (age > 100) {
             this.age = 100;
-        }else if (age < 0){
+        } else if (age < 0) {
             this.age = 0;
-        }else {
-        this.age = age;}
+        } else {
+            this.age = age;
+        }
     }
 
-    public int getAge(){
+    public int getAge() {
         return age;
     }
-    
+
     @Override
     public String toString() {
         return "Baton{" + "age=" + age + '}';
-    }    
-    
+    }
+
 }
