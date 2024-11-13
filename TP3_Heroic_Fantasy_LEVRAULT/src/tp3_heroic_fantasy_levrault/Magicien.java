@@ -8,22 +8,30 @@ package tp3_heroic_fantasy_levrault;
  *
  * @author Maxime
  */
-public class Magicien {
+public class Magicien extends Personnage {
 
     private boolean confirme;
     
-    public Magicien(boolean confirme) {
+    //constructeur
+    public Magicien(boolean confirme, String nom, int Pv) {
+        super(nom, Pv);
         this.confirme = confirme;
     }
-
+   
     //getter
-    public boolean getConfirme() {
+    public boolean getConfirme(){
         return confirme;
     }
     
     //setter
-    public void setConfirme(boolean confirme) {
+    public void setConfirme(boolean confirme){
         this.confirme = confirme;
     }
-
+    
+    //toString
+    @Override
+    public String toString() {
+        return "Magicien{" + "confirme=" + confirme + '}';
+    }
+    
 }
