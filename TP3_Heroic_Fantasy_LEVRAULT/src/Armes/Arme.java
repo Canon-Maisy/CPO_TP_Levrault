@@ -9,44 +9,47 @@ package Armes;
  * @author Maxime
  */
 public abstract class Arme {
+
     private String nom;
     private int attaque;
-    
+
     //constructeur
-    public Arme (String nom, int attaque){
+    public Arme(String nom, int attaque) {
         this.nom = nom;
-        
+
         if (attaque > 100) {
             this.attaque = 100; // On limite supérieurement à 100
-        } else if (attaque < 0){
+        } else if (attaque < 0) {
             this.attaque = 100; // On limite inférieurement à 0
         } else {
             this.attaque = attaque;
         }
     }
-    
+
     //setter avec restriction
-    public void setAttaque(int attaque){
+    public void setAttaque(int attaque) {
         if (attaque > 100) {
             this.attaque = 100; // On limite supérieurement à 100
-        } else if (attaque < 0){
+        } else if (attaque < 0) {
             this.attaque = 100; // On limite inférieurement à 0
         } else {
-            this.attaque = attaque;}
+            this.attaque = attaque;
+        }
     }
-    
+
     //getter pour l'attaque
     public int getAttaque() {
         return attaque;
     }
+
     //getter pour le nom
-    public String getNom(){
-        return nom;}
+    public String getNom() {
+        return nom;
+    }
 
     @Override
     public String toString() {
         return "Arme{" + "nom=" + nom + ", attaque=" + attaque + '}';
     }
-    
-    
+
 }
